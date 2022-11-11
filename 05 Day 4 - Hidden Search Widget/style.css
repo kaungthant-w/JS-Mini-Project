@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(30deg, rgb(51, 187, 211),rgb(36, 176, 211));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 0;
+    font-size: 20px;
+    padding: 20px;
+    color: blueviolet;
+    border-radius: 5px;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+
+}
+
+.btn:focus,
+.input:focus {
+    outline: 0;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(190px);
+}
